@@ -1,0 +1,252 @@
+<!-- Hero Section -->
+<section class="h-[500px]">
+  <div class="max-w-[85rem] h-full mx-auto flex flex-col items-center justify-center">
+    <div class="flex items-center bg-white border border-gray-200 shadow-sm rounded p-4 text-3xl font-bold">
+      <img src="bolt.png" class="w-10 h-10" alt="">
+      <span class="text-primary mx-1">Unlock</span> Your Creative Potential
+    </div>
+    <p class="text-xl my-3 font-medium">
+      with Online Design and Development Courses.
+    </p>
+    <p class="text-sm mb-7">
+      Learn from industry Experts and Enhance Your Skills.
+    </p>
+    <div class="sm:order-3 flex items-center gap-x-2 mt-4 text-sm">
+      <button type="button" class="py-2 px-4 bg-primary rounded text-white">
+        Explore Courses
+      </button>
+      <button type="button" class="py-2 px-4 bg-white rounded">
+        View Pricing
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Sponsors -->
+<app-sponsors></app-sponsors>
+
+<!-- Intro Video -->
+<!-- <section>
+  <div class="max-w-[85rem] h-full mx-auto flex flex-col items-center justify-center py-10">
+    <div class="embed-responsive embed-responsive-16by9 relative w-full overflow-hidden rounded-xl" style="padding-top: 56.25%">
+      <iframe class="embed-responsive-item absolute bottom-0 left-0 right-0 top-0 h-full w-full"
+        src="https://www.youtube.com/embed/m7GAtjQvzP0?si=l_YU0OlGs-agS-XI&amp;controls=0" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section> -->
+
+<!-- Benefits -->
+<section class="px-2 md:px-4 py-10">
+  <div class="max-w-[85rem] h-full mx-auto">
+    <h2 class="font-medium text-2xl">
+      Benefits
+    </h2>
+    <div class="flex flex-row justify-between items-center">
+      <p class="text-base my-4 max-w-screen-lg">
+        Gain access to a wide range of courses that will help you develop new skills, improve your knowledge, and
+        advance
+        your career. Our courses are designed by industry experts to ensure you get the best learning experience.
+      </p>
+      <button class="bg-white h-fit px-4 py-2 text-sm rounded text-sm font-medium">
+        View All
+      </button>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-stretch mt-10">
+      @for (benefit of benefits; track $index) {
+      <div
+        class="flex flex-col bg-white border shadow-sm hover:shadow-lg rounded-md py-6 px-8 aspect-[2/1] hover:transform hover:scale-105 transition-transform duration-300 cursor-pointer group">
+        <h1 class="text-4xl text-end mb-4 font-bold group-hover:text-blue-500 transition-transform duration-300">
+          {{ benefit.number }}
+        </h1>
+        <h3 class="mt-1 text-lg font-medium">
+          {{ benefit.title }}
+        </h3>
+        <p class="text-sm">
+          {{ benefit.desc }}
+        </p>
+        <div class="flex justify-end mt-6">
+          <a class="w-fit group-hover:border-blue-500 border-2 border-transparent transition-transform duration-300">
+            <img src="goto.png" class="w-16 h-16" alt="">
+          </a>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Our Courses -->
+<section class="px-2 md:px-4 py-10">
+  <div class="max-w-[85rem] h-full mx-auto">
+    <h2 class="font-medium text-2xl">
+      Our Courses
+    </h2>
+    <div class="flex flex-row justify-between items-center">
+      <p class="text-base my-4 max-w-screen-lg">
+        Discover our diverse range of courses designed to help you master new skills and advance your career. From web
+        development and graphic design to data science and digital marketing, our expert-led courses provide the
+        knowledge
+        and hands-on experience you need to succeed.
+      </p>
+      <button class="bg-white h-fit px-4 py-2 text-sm rounded text-sm font-medium">
+        View All
+      </button>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
+      @for (course of courses; track $index) {
+      <div class="flex flex-col bg-white border shadow-sm hover:shadow-lg rounded-md p-6">
+        <div class="h-80">
+          <img [src]="course.img_url" alt="" class="w-full h-full rounded" style="object-fit: fit;">
+        </div>
+        <div class="mt-4">
+          <div class="flex justify-between">
+            <div>
+              <button class="border mr-2 h-fit px-4 py-2 text-sm rounded text-sm font-medium">
+                {{ course.duration }}
+              </button>
+              <button class="border h-fit px-4 py-2 text-sm rounded text-sm font-medium">
+                {{ course.level }}
+              </button>
+            </div>
+            <p>{{ course.teacher }}</p>
+          </div>
+          <h2 class="text-lg my-3 font-medium">
+            {{ course.name }}
+          </h2>
+          <p class="text-sm text-gray-600">
+            {{ course.desc }}
+          </p>
+          <div class="mt-8">
+            <button class="bg-white h-fit px-4 py-4 text-sm rounded text-sm font-medium w-full border bg-gray-300">
+              Get it Now
+            </button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Tier -->
+<section class="py-10">
+  <div class="max-w-[85rem] h-full mx-auto">
+    <h2 class="font-medium text-2xl">
+      Our Pricing
+    </h2>
+    <div class="flex flex-row justify-between items-center">
+      <p class="text-base my-4 max-w-screen-lg">
+        Choose the plan that fits your goals! Our Basic package gives you access to essential courses to build your
+        skills, while the Premium package unlocks exclusive content, expert-led masterclasses, and advanced learning
+        tools to take your knowledge to the next level.
+      </p>
+      <div class="flex justify-center p-2 bg-white rounded">
+        <button (click)="togglePricing('monthly')"
+          [ngClass]="{'bg-primary text-white': pricingMode === 'monthly', 'bg-white': pricingMode !== 'monthly'}"
+          class="px-4 py-2 rounded">
+          Monthly
+        </button>
+        <button (click)="togglePricing('yearly')"
+          [ngClass]="{'bg-primary text-white': pricingMode === 'yearly', 'bg-white': pricingMode !== 'yearly'}"
+          class="px-4 py-2 rounded">
+          Yearly
+        </button>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 bg-white rounded-lg p-8 mt-8">
+      <div class="bg-gray-100 p-4 rounded text-center">
+        <h2 class="font-medium py-3 text-lg rounded bg-[#FFF9F0]">Free Plan</h2>
+        <h1 class="text-4xl my-8">$0 <span class="text-sm">/month</span></h1>
+        <div class="rounded bg-white/90 pt-6">
+          <h3 class="font-medium">Available Features</h3>
+          <ul class="flex flex-col gap-y-4 m-6 text-right text-sm">
+            <li class="border flex items-center rounded p-3">
+              <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+              Access to selected free courses.
+            </li>
+            <li class="border flex items-center rounded p-3">
+              <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+              Limited course materials and resources.
+            </li>
+            <li class="border flex items-center rounded p-3">
+              <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+              Basic community support.
+            </li>
+            <li class="border flex items-center rounded p-3">
+              <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+              No certification upon completion.
+            </li>
+            <li class="border flex items-center rounded p-3">
+              <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+              Add supported platform.
+            </li>
+            <li class="border flex items-center rounded p-3">
+              <img src="no.png" class="w-5 h-5 mr-3" alt="">
+              Access to exclusive Pro Plan community forums.
+            </li>
+            <li class="border flex items-center rounded p-3">
+              <img src="no.png" class="w-5 h-5 mr-3" alt="">
+              Early access to new courses and updates.
+            </li>
+          </ul>
+          <div class="mt-8">
+            <button class="bg-primary rounded-b text-white h-fit px-4 py-4 font-medium w-full border bg-gray-300">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-100 p-4 rounded text-center">
+        <h2 class="font-medium py-3 text-lg rounded bg-[#FFF9F0]">Pro Plan</h2>
+        <h1 class="text-4xl my-8">${{ pricingMode === 'monthly' ? '79' : '50' }}<span class="text-sm">/month</span></h1>
+        <div class="rounded bg-white/90 pt-6">
+          <h3 class="font-medium">Available Features</h3>
+          <ul class="flex flex-col gap-y-4 m-6 text-right text-sm">
+            <li class="border flex items-center rounded p-3">
+              <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+              Unlimited access to all courses.
+            </li>
+            <li class="border flex items-center rounded p-3">
+              <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+              Unlimited course materials and resources.
+            </li>
+            <li class="border flex items-center rounded p-3">
+              <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+              Priority support from instructors.
+            </li>
+            <li class="border flex items-center rounded p-3">
+              <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+              Course completion certificates.
+            </li>
+            <li class="border flex items-center rounded p-3">
+              <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+              Ad-free experience.
+            </li>
+            <li class="border flex items-center rounded p-3">
+              <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+              Access to exclusive Pro Plan community forums.
+            </li>
+            <li class="border flex items-center rounded p-3">
+              <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+              Early access to new courses and updates.
+            </li>
+          </ul>
+          <div class="mt-8">
+            <button class="bg-primary rounded-b text-white h-fit px-4 py-4 font-medium w-full border bg-gray-300">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ's -->
+<app-faqs></app-faqs>
+
+<!-- Footer -->
+<app-footer></app-footer>
