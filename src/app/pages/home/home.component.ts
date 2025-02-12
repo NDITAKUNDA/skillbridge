@@ -55,7 +55,7 @@ export class HomeComponent {
       "img_url": "courses/web_design.png"
     },
     {
-      "name": "WUI/UX Design",
+      "name": "UI/UX Design",
       "desc": "Master the art of creating user interface (UI) and enhancing user experiences (UX). Learn design principles, wire framing, prototyping and usability testing techniques.",
       "teacher": "Love Quinn",
       "duration": "6 Weeks",

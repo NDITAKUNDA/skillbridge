@@ -4,6 +4,7 @@ import { Router, Event, NavigationEnd } from '@angular/router';
 
 import { IStaticMethods } from 'preline/preline';
 import { NavbarComponent } from "./shared/navbar/navbar.component";
+import { FooterComponent } from "./shared/footer/footer.component";
 declare global {
   interface Window {
     HSStaticMethods: IStaticMethods;
@@ -12,7 +13,7 @@ declare global {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
