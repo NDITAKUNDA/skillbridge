@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { SponsorsComponent } from "../../shared/sponsors/sponsors.component";
 import { CommonModule } from '@angular/common';
 import { FaqsComponent } from "../../shared/faqs/faqs.component";
-import { FooterComponent } from "../../shared/footer/footer.component";
 
 @Component({
   selector: 'app-home',
-  imports: [SponsorsComponent, CommonModule, FaqsComponent, FooterComponent],
+  imports: [SponsorsComponent, CommonModule, FaqsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

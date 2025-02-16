@@ -1,0 +1,58 @@
+<section class="py-20">
+    <div class="max-w-[85rem] h-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-4">
+        <div>
+            <h2 class="font-medium text-4xl tracking-wide">
+                About Skillbridge
+            </h2>
+        </div>
+        <div class="mt-4 md:mt-0">
+            <p class="text-sm text-gray-600">
+                Welcome to our platform, where we are passionate about empowering individuals to master the world of
+                design and development. We offer a wide range of online courses designed to equip learners with the
+                skills and knowledge needed to succeed in the ever-evolving digital landscape.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Achievements -->
+<section>
+    <div class="max-w-[85rem] mx-auto">
+        @for (item of aboutData; track $index) {
+        <h2 class="font-medium text-2xl mt-10 mb-2">
+            {{ item.title }}
+        </h2>
+        <p class="text-sm text-gray-600">
+            {{ item.desc }}
+        </p>
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+            @for (point of item.points; track $index) {
+            <div class="rounded-md p-6 bg-white">
+                <div>
+                    <img [src]="point.img_url" alt="">
+                </div>
+                <h3 class="font-medium my-4">
+                    {{ point.title }}
+                </h3>
+                <p class="text-sm text-gray-600">
+                    {{ point.desc }}
+                </p>
+            </div>
+            }
+        </div>
+        }
+        <div class="rounded-md p-20 bg-white my-10 flex flex-row justify-between items-center bg-right bg-no-repeat" style="background-image: url('/abstract.png');">
+            <div class="max-w-screen-md">
+                <h1 class="mb-2 text-4xl font-bold text-[#262626]">
+                    <span class="text-primary">Together</span>, let's shape the future of digital innovation
+                </h1>
+                <p class="text-sm text-gray-600">
+                    Join us on this exciting learning journey and unlock your potential in design and development.
+                </p>
+            </div>
+            <button class="bg-primary text-white h-fit px-4 py-2 text-sm rounded text-sm font-medium">
+                Join Now
+            </button>
+        </div>
+    </div>
+</section>
