@@ -1,3 +1,4 @@
+import { PricingComponent } from './pages/pricing/pricing.component';
 import { AboutComponent } from './pages/about/about.component';
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
@@ -18,5 +19,10 @@ export const routes: Routes = [
     path: 'about',
     component: AboutComponent,
     title: 'Get to know us more, Elevate yourself today'
+  },
+  {
+    path: 'pricing',
+    component: PricingComponent,
+    title: 'Invest today, Celebrate Tomorrow, Elevate yourself today'
   }
 ];
