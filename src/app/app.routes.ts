@@ -4,6 +4,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { CoursesComponent } from './pages/courses/courses.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [
   {
@@ -35,5 +36,10 @@ export const routes: Routes = [
     path: 'signup',
     component: LoginComponent,
     title: "Welcome to Skillbridge, Let's get to learning!"
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    title: "Got something on your mind, Get in touch and let us assist you!"
   }
 ];
