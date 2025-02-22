@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-courses',
-  imports: [],
+  imports: [
+    CommonModule
+  ],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css'
 })
@@ -11,7 +14,7 @@ export class CoursesComponent {
     {
       "name": "Web Design Fundamentals",
       "desc": "Learn the fundamentals of web design, including HTML, CSS and responsive design principles. Develop the skills to create visually appealing and user-friendly websites.",
-      "teacher": "Takunda Nyan'ara",
+      "teacher": "Takunda",
       "duration": "4 Weeks",
       "level": "Beginner",
       "img_urls": ["courses/web_design.png", "courses/web_design_2.png", "courses/web_design_3.png"],
@@ -41,7 +44,7 @@ export class CoursesComponent {
     {
       "name": "UI/UX Design",
       "desc": "Master the art of creating user interface (UI) and enhancing user experiences (UX). Learn design principles, wire framing, prototyping and usability testing techniques.",
-      "teacher": "Love Quinn",
+      "teacher": "Love",
       "duration": "6 Weeks",
       "level": "Intermediate",
       "img_urls": ["courses/ui_ux_design.png", "courses/ui_ux_design_2.png", "courses/ui_ux_design_3.png"],
@@ -101,7 +104,7 @@ export class CoursesComponent {
     {
       "name": "Graphic Design for Beginners",
       "desc": "Discover the fundamentals of graphic design, including typography, color theory, layout design and image manipulation techniques. Create visually stunning designs for print and digital media.",
-      "teacher": "Joe Goldberg",
+      "teacher": "Joe",
       "duration": "10 Weeks",
       "level": "Beginner",
       "img_urls": ["courses/graphic_design.png", "courses/graphic_design_2.png", "courses/graphic_design_3.png"],

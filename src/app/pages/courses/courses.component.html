@@ -1,7 +1,7 @@
 <section class="py-20">
-  <div class="max-w-[85rem] h-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-4">
+  <div class="max-w-[85rem] mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-x-4">
     <div>
-      <h2 class="font-medium text-4xl tracking-wide">
+      <h2 class="font-semibold text-2xl md:text-4xl">
         Online Courses on Design and Development
       </h2>
     </div>
@@ -17,10 +17,10 @@
 
 <!-- Our Courses -->
 <section class="py-2">
-  <div class="max-w-[85rem] h-full mx-auto">
+  <div class="max-w-[85rem] mx-auto px-4">
     @for (course of courses; track $index) {
-    <div class="flex flex-col bg-white border shadow-sm hover:shadow-lg rounded-md p-6 mb-4">
-      <h2 class="text-lg my-3 font-medium">
+    <div class="flex flex-col bg-white border shadow-sm hover:shadow-lg rounded-md p-3 md:p-6 mb-4">
+      <h2 class="text-xl my-3 font-semibold">
         {{ course.name }}
       </h2>
       <div class="flex flex-col md:flex-row">
@@ -28,29 +28,37 @@
           {{ course.desc }}
         </p>
       </div>
-      <div class="h-84 grid md:grid-cols-3 gap-x-4 mt-5">
-        <img [src]="course.img_urls[0]" alt="" class="w-full h-full rounded" style="object-fit: fit;">
-        <img [src]="course.img_urls[1]" alt="" class="w-full h-full rounded hidden md:block" style="object-fit: fit;">
-        <img [src]="course.img_urls[2]" alt="" class="w-full h-full rounded hidden md:block" style="object-fit: fit;">
+      <div class="grid md:grid-cols-3 gap-x-4 mt-5">
+        <div class="h-84">
+          <img [src]="course.img_urls[0]" alt="" class="w-full h-full rounded" style="object-fit: cover;">
+        </div>
+        <div class="h-84">
+          <img [src]="course.img_urls[1]" alt="" class="w-full h-full rounded hidden md:block"
+            style="object-fit: cover;">
+        </div>
+        <div class="h-84">
+          <img [src]="course.img_urls[2]" alt="" class="w-full h-full rounded hidden md:block"
+            style="object-fit: cover;">
+        </div>
       </div>
       <div class="mt-4">
         <div class="flex justify-between items-center">
           <div>
-            <button class="border mr-2 h-fit px-4 py-2 text-sm rounded text-sm font-medium">
+            <button class="border border-primary mr-2 h-fit px-4 py-2 text-sm rounded text-sm font-medium">
               {{ course.duration }}
             </button>
-            <button class="border h-fit px-4 py-2 text-sm rounded text-sm font-medium">
+            <button class="border border-primary h-fit px-4 py-2 text-sm rounded text-sm font-medium">
               {{ course.level }}
             </button>
           </div>
-          <p class="font-medium">by {{ course.teacher }}</p>
+          <p>by <span class="font-semibold">{{ course.teacher }}</span></p>
         </div>
-        <div class="rounded mt-3">
-          <h1 class="border-b font-medium text-lg p-3 border rounded-t">Curriculum</h1>
+        <div class="rounded mt-3 border border-primary">
+          <h1 class="font-semibold text-lg p-3 border-b border-primary">Curriculum</h1>
           <div class="grid grid-cols-2 md:grid-cols-5">
             @for (curriculum of course.curriculum; track $index) {
-            <div class="p-4 text-center border">
-              <h1 class="font-medium text-2xl w-full md:w-3/5 mx-auto mt-2">
+            <div class="p-4 text-center border border-1 border-primary" [class.md:border-primary]="$index !== 0">
+              <h1 class="font-bold text-2xl w-full md:w-3/5 mx-auto mt-2">
                 {{ curriculum.name }}
               </h1>
               <p class="font-medium text-sm w-full md:w-3/5 mx-auto mt-2">
