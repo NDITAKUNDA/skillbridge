@@ -1,11 +1,11 @@
 <section class="py-20">
-    <div class="max-w-[85rem] h-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-4">
+    <div class="max-w-[85rem] mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-x-4">
         <div>
-            <h2 class="font-medium text-4xl tracking-wide">
+            <h2 class="font-semibold text-2xl md:text-4xl">
                 Our Pricing
             </h2>
         </div>
-        <div class=" mt-4 md:mt-0">
+        <div class="mt-4 md:mt-0">
             <p class="text-gray-600 text-sm">
                 We believe in providing flexible and affordable pricing options for our services. Whether you're an
                 individual looking to enhance your skills or a business seeking professional development solutions, we
@@ -18,110 +18,107 @@
 <hr class="max-w-[85rem] mx-auto">
 
 <section class="py-10">
-    <div class="max-w-[85rem] h-full mx-auto">
+    <div class="max-w-[85rem] mx-auto px-4">
         <div>
-            <div class="flex justify-center p-2 bg-white rounded w-fit mx-auto">
+            <div class="flex justify-center p-2 bg-white rounded border border-primary w-fit mx-auto">
                 <button (click)="togglePricing('monthly')"
-                    [ngClass]="{'bg-primary text-white': pricingMode === 'monthly', 'bg-white': pricingMode !== 'monthly'}"
-                    class="px-4 py-2 rounded">
-                    Monthly
+                  [ngClass]="{'bg-primary text-white': pricingMode === 'monthly', 'bg-white': pricingMode !== 'monthly'}"
+                  class="px-4 py-2 rounded">
+                  Monthly
                 </button>
                 <button (click)="togglePricing('yearly')"
-                    [ngClass]="{'bg-primary text-white': pricingMode === 'yearly', 'bg-white': pricingMode !== 'yearly'}"
-                    class="px-4 py-2 rounded">
-                    Yearly
+                  [ngClass]="{'bg-primary text-white': pricingMode === 'yearly', 'bg-white': pricingMode !== 'yearly'}"
+                  class="px-4 py-2 rounded">
+                  Yearly
                 </button>
-            </div>
+              </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 bg-white rounded-lg p-8 mt-8">
-            <div class="bg-gray-100 p-4 rounded text-center">
-                <h2 class="font-medium py-3 text-lg rounded bg-[#FFF9F0]">Free Plan</h2>
-                <h1 class="text-4xl my-8">$0 <span class="text-sm">/month</span></h1>
-                <div class="rounded bg-white/90 pt-6">
-                    <h3 class="font-medium">Available Features</h3>
-                    <ul class="flex flex-col gap-y-4 m-6 text-right text-sm">
-                        <li class="border flex items-center rounded p-3">
-                            <img src="yes.png" class="w-5 h-5 mr-3" alt="">
-                            Access to selected free courses.
-                        </li>
-                        <li class="border flex items-center rounded p-3">
-                            <img src="yes.png" class="w-5 h-5 mr-3" alt="">
-                            Limited course materials and resources.
-                        </li>
-                        <li class="border flex items-center rounded p-3">
-                            <img src="yes.png" class="w-5 h-5 mr-3" alt="">
-                            Basic community support.
-                        </li>
-                        <li class="border flex items-center rounded p-3">
-                            <img src="yes.png" class="w-5 h-5 mr-3" alt="">
-                            No certification upon completion.
-                        </li>
-                        <li class="border flex items-center rounded p-3">
-                            <img src="yes.png" class="w-5 h-5 mr-3" alt="">
-                            Add supported platform.
-                        </li>
-                        <li class="border flex items-center rounded p-3">
-                            <img src="no.png" class="w-5 h-5 mr-3" alt="">
-                            Access to exclusive Pro Plan community forums.
-                        </li>
-                        <li class="border flex items-center rounded p-3">
-                            <img src="no.png" class="w-5 h-5 mr-3" alt="">
-                            Early access to new courses and updates.
-                        </li>
-                    </ul>
-                    <div class="mt-8">
-                        <button
-                            class="bg-primary rounded-b text-white h-fit px-4 py-4 font-medium w-full border bg-gray-300">
-                            Get Started
-                        </button>
-                    </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-2 lg:gap-x-6 bg-white rounded-lg p-2 lg:p-4 lg:p-8 mt-4 lg:mt-8">
+            <div class="bg-gray-100 p-2 md:p-4 rounded text-center">
+              <h2 class="font-semibold py-3 text-lg rounded bg-[#FFF9F0]">Free Plan</h2>
+              <h1 class="font-bold text-4xl my-8">$0 <span class="text-sm">/month</span></h1>
+              <div class="rounded bg-white/90 pt-6">
+                <h3 class="font-medium">Available Features</h3>
+                <ul class="flex flex-col gap-y-4 m-3 md:m-6 text-left lg:text-right text-sm">
+                  <li class="border flex items-center rounded p-2 md:p-3">
+                    <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+                    Access to selected free courses.
+                  </li>
+                  <li class="border flex items-center rounded p-2 md:p-3">
+                    <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+                    Limited course materials and resources.
+                  </li>
+                  <li class="border flex items-center rounded p-2 md:p-3">
+                    <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+                    Basic community support.
+                  </li>
+                  <li class="border flex items-center rounded p-2 md:p-3">
+                    <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+                    No certification upon completion.
+                  </li>
+                  <li class="border flex items-center rounded p-2 md:p-3">
+                    <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+                    Add supported platform.
+                  </li>
+                  <li class="border flex items-center rounded p-2 md:p-3">
+                    <img src="no.png" class="w-5 h-5 mr-3" alt="">
+                    Access to exclusive Pro Plan community forums.
+                  </li>
+                  <li class="border flex items-center rounded p-2 md:p-3">
+                    <img src="no.png" class="w-5 h-5 mr-3" alt="">
+                    Early access to new courses and updates.
+                  </li>
+                </ul>
+                <div class="mt-8">
+                  <button class="bg-primary rounded-b text-white h-fit px-4 py-4 font-medium w-full border bg-gray-300">
+                    Get Started
+                  </button>
                 </div>
+              </div>
             </div>
-            <div class="bg-gray-100 p-4 rounded text-center">
-                <h2 class="font-medium py-3 text-lg rounded bg-[#FFF9F0]">Pro Plan</h2>
-                <h1 class="text-4xl my-8">${{ pricingMode === 'monthly' ? '79' : '50' }}<span
-                        class="text-sm">/month</span></h1>
-                <div class="rounded bg-white/90 pt-6">
-                    <h3 class="font-medium">Available Features</h3>
-                    <ul class="flex flex-col gap-y-4 m-6 text-right text-sm">
-                        <li class="border flex items-center rounded p-3">
-                            <img src="yes.png" class="w-5 h-5 mr-3" alt="">
-                            Unlimited access to all courses.
-                        </li>
-                        <li class="border flex items-center rounded p-3">
-                            <img src="yes.png" class="w-5 h-5 mr-3" alt="">
-                            Unlimited course materials and resources.
-                        </li>
-                        <li class="border flex items-center rounded p-3">
-                            <img src="yes.png" class="w-5 h-5 mr-3" alt="">
-                            Priority support from instructors.
-                        </li>
-                        <li class="border flex items-center rounded p-3">
-                            <img src="yes.png" class="w-5 h-5 mr-3" alt="">
-                            Course completion certificates.
-                        </li>
-                        <li class="border flex items-center rounded p-3">
-                            <img src="yes.png" class="w-5 h-5 mr-3" alt="">
-                            Ad-free experience.
-                        </li>
-                        <li class="border flex items-center rounded p-3">
-                            <img src="yes.png" class="w-5 h-5 mr-3" alt="">
-                            Access to exclusive Pro Plan community forums.
-                        </li>
-                        <li class="border flex items-center rounded p-3">
-                            <img src="yes.png" class="w-5 h-5 mr-3" alt="">
-                            Early access to new courses and updates.
-                        </li>
-                    </ul>
-                    <div class="mt-8">
-                        <button
-                            class="bg-primary rounded-b text-white h-fit px-4 py-4 font-medium w-full border bg-gray-300">
-                            Get Started
-                        </button>
-                    </div>
+            <div class="bg-gray-100 p-2 md:p-4 rounded text-center">
+              <h2 class="font-semibold py-3 text-lg rounded bg-[#FFF9F0]">Pro Plan</h2>
+              <h1 class="font-bold text-4xl my-8">${{ pricingMode === 'monthly' ? '79' : '50' }}<span class="text-sm">/month</span></h1>
+              <div class="rounded bg-white/90 pt-6">
+                <h3 class="font-medium">Available Features</h3>
+                <ul class="flex flex-col gap-y-4 m-3 md:m-6  text-left lg:text-right text-sm">
+                  <li class="border flex items-center rounded p-2 md:p-3">
+                    <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+                    Unlimited access to all courses.
+                  </li>
+                  <li class="border flex items-center rounded p-2 md:p-3">
+                    <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+                    Unlimited course materials and resources.
+                  </li>
+                  <li class="border flex items-center rounded p-2 md:p-3">
+                    <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+                    Priority support from instructors.
+                  </li>
+                  <li class="border flex items-center rounded p-2 md:p-3">
+                    <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+                    Course completion certificates.
+                  </li>
+                  <li class="border flex items-center rounded p-2 md:p-3">
+                    <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+                    Ad-free experience.
+                  </li>
+                  <li class="border flex items-center rounded p-2 md:p-3">
+                    <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+                    Access to exclusive Pro Plan community forums.
+                  </li>
+                  <li class="border flex items-center rounded p-2 md:p-3">
+                    <img src="yes.png" class="w-5 h-5 mr-3" alt="">
+                    Early access to new courses and updates.
+                  </li>
+                </ul>
+                <div class="mt-8">
+                  <button class="bg-primary rounded-b text-white h-fit px-4 py-4 font-medium w-full border bg-gray-300">
+                    Get Started
+                  </button>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
     </div>
 </section>
 
