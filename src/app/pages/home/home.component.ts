@@ -48,7 +48,7 @@ export class HomeComponent {
     {
       "name": "Web Design Fundamentals",
       "desc": "Learn the fundamentals of web design, including HTML, CSS and responsive design principles. Develop the skills to create visually appealing and user-friendly websites.",
-      "teacher": "Takunda Nyan'ara",
+      "teacher": "Takunda",
       "duration": "4 Weeks",
       "level": "Beginner",
       "img_url": "courses/web_design.png"
@@ -56,7 +56,7 @@ export class HomeComponent {
     {
       "name": "UI/UX Design",
       "desc": "Master the art of creating user interface (UI) and enhancing user experiences (UX). Learn design principles, wire framing, prototyping and usability testing techniques.",
-      "teacher": "Love Quinn",
+      "teacher": "Love",
       "duration": "6 Weeks",
       "level": "Intermediate",
       "img_url": "courses/ui_ux_design.png"
@@ -71,8 +71,8 @@ export class HomeComponent {
     },
     {
       "name": "Graphic Design for Beginners",
-      "desc": "Discover the fundamentals of graphic design, including typography, color theory, layout design and image manipulation techniques. Create visually stunning designs for print and digital media.",
-      "teacher": "Joe Goldberg",
+      "desc": "Discover the fundamentals of graphic design, including typography, color theory, layout design and image manipulation techniques.",
+      "teacher": "Joe",
       "duration": "10 Weeks",
       "level": "Beginner",
       "img_url": "courses/graphic_design.png"
