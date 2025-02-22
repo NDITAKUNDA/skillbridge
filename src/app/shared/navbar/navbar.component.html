@@ -1,7 +1,7 @@
 <header class="flex flex-wrap sm:justify-start sm:flex-nowrap w-full py-3">
   <nav class="max-w-[85rem] w-full mx-auto px-4 md:px-1 flex flex-wrap basis-full items-center justify-between md:text-sm lg:text-lg">
     <a class="sm:order-1 flex-none text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80 md:hidden"
-      href="/">
+      href="/home">
       <img src="Logo.png" class="w-10 h-10" alt="">
     </a>
     <div class="sm:order-3 flex items-center gap-x-2">
@@ -37,14 +37,14 @@
       aria-labelledby="hs-navbar-alignment-collapse">
       <div class="flex flex-col md:gap-3 lg:gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5">
         <a class="hidden md:block flex-none text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80"
-          href="#">
+          href="home">
           <img src="Logo.png" class="w-10 h-10" alt="">
         </a>
-        <a href="/" class="bg-gray-200 px-4 py-2 rounded">Home</a>
-        <a href="/courses" class="px-4 py-2 rounded hover:bg-gray-200">Courses</a>
-        <a href="/about" class="px-4 py-2 rounded hover:bg-gray-200">About Us</a>
-        <a href="/pricing" class="px-4 py-2 rounded hover:bg-gray-200">Pricing</a>
-        <a href="/contact" class="px-4 py-2 rounded hover:bg-gray-200">Contact</a>
+        <a href="/home" class="px-4 py-2 rounded hover:bg-gray-200" [class.bg-gray-200]="currentRoute === 'home'">Home</a>
+        <a href="/courses" class="px-4 py-2 rounded hover:bg-gray-200" [class.bg-gray-200]="currentRoute === 'courses'">Courses</a>
+        <a href="/about" class="px-4 py-2 rounded hover:bg-gray-200" [class.bg-gray-200]="currentRoute === 'about'">About Us</a>
+        <a href="/pricing" class="px-4 py-2 rounded hover:bg-gray-200" [class.bg-gray-200]="currentRoute === 'pricing'">Pricing</a>
+        <a href="/contact" class="px-4 py-2 rounded hover:bg-gray-200" [class.bg-gray-200]="currentRoute === 'contact'">Contact</a>
       </div>
     </div>
   </nav>

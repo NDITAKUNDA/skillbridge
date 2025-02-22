@@ -8,7 +8,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
     title: 'Welcome to Skill Bridge, Elevate yourself today'
   },
@@ -41,5 +41,10 @@ export const routes: Routes = [
     path: 'contact',
     component: ContactComponent,
     title: "Got something on your mind, Get in touch and let us assist you!"
+  },
+  {
+    path: '**',
+    component: HomeComponent,
+    title: 'Welcome to Skill Bridge, Elevate yourself today'
   }
 ];

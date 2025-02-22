@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from "../../shared/navbar/navbar.component";
 
 @Component({
   selector: 'app-courses',
   imports: [
-    CommonModule
-  ],
+    CommonModule,
+    NavbarComponent
+],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css'
 })
